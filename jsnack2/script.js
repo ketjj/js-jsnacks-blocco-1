@@ -12,12 +12,12 @@ console.log(primaParola);
 console.log(secondaParola);
 
 if(primaParola.length > secondaParola.length) {
-  console.log(secondaParola);
+  // console.log(secondaParola);
   document.getElementById('result').innerHTML = secondaParola + " " +primaParola;
 
   
 } else if (secondaParola.length > primaParola.length) {
-  console.log(primaParola);
+  // console.log(primaParola);
   document.getElementById('result').innerHTML = primaParola + " " + secondaParola;
  
 }
