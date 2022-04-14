@@ -4,4 +4,18 @@
 // se è dispari inseriscilo nell’array
 // */
 
+let contatore = [];
 
+for(let i = 0; i < 6; i++){
+  const userNumber = parseInt(prompt('Inserire un numero'))
+  if(isNaN(userNumber)){
+    alert('Inserire un numero');
+  }
+
+  if(userNumber % 2){
+    contatore.push(userNumber);
+  }
+}
+
+document.getElementById('result').innerHTML = contatore;
+console.log(contatore);
