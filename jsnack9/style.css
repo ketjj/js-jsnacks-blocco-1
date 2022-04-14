@@ -1,0 +1,14 @@
+.box-result {
+  background-color: rgb(240, 118, 157);
+  color: white;
+  width: 70%;
+  margin:30px auto;
+  font-size: 30px;
+  text-align: center;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.yellow {
+  color: yellow;
+}

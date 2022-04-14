@@ -1,0 +1,11 @@
+.box-result {
+  background-color: rgb(226, 223, 43);
+  color: rgb(215, 25, 25);
+  width: 30%;
+  margin: 20px auto;
+  font-size: 30px;
+  text-align: center;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 3px 3px 6px rgb(83, 7, 83);
+}
