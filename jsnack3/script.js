@@ -6,19 +6,23 @@
 
 
 //For
-const forCircle = document.getElementById('result1');
+const forLoop = document.getElementById('result1');
 
-forCircle.addEventListener('click' , function(){
-  let sumTotal= 0;
+forLoop.addEventListener('click' , function(){
+  let sumTotal = 0;
   
   for(let i = 0; i < 5; i++){
     
-    let insertNumber= parseInt(prompt('Inserire numero'));
+    let insertNumber = prompt('Inserire ' + (i+1) + '° numero');
 
-    if (isNaN(insertNumber)){
-      alert('Inserisci il numero');
+    while (isNaN(insertNumber)){
+      alert('Non ha inserito un numero... riprova');
+      insertNumber = prompt('Inserire ' + (i+1) + '° numero');
     }
-    sumTotal = parseInt(sumTotal + insertNumber);
+
+    insertNumber = parseInt(insertNumber);
+
+    sumTotal = sumTotal + insertNumber;
     console.log(insertNumber);
   }
   
@@ -35,16 +39,17 @@ forWhile.addEventListener('click' , function(){
   let contatore = 0;
   
   while(contatore < 5){ 
-    contatore++;
-
-    let insertNumber = parseInt(prompt('Inserire numero'));
-
-    if (isNaN(insertNumber)){
-      alert('Inserisci il numero');
+    
+    let insertNumber = prompt('Inserire ' + (contatore + 1) + ' numero');
+    
+    while(isNaN(insertNumber)){
+      alert('Non ha inserito un numero... riprova');
+      insertNumber = prompt ( 'Inserire ' + (contatore + 1) + ' numero')
     }
-
-    sumTotal = parseInt(sumTotal + insertNumber);
-    console.log(insertNumber);
+    insertNumber = parsint(insertNumber);
+    
+    sumTotal = sumTotal + insertNumber;
+    contatore++;
   }
   
   document.getElementById('result2').innerHTML = sumTotal;
