@@ -10,7 +10,6 @@ console.log(guestList);
 let guestName;
 let invitation = false;
 
-while(invitation === false){
   guestName = prompt('Inserisci il nome');
 
   for(let i = 0; i < guestList.length; i++){
@@ -21,7 +20,8 @@ while(invitation === false){
 
   if(invitation === false){
     alert('Ci spiace, non è nella lista degli invitati');
-  }  
-}
+  } else {
+    document.getElementById('result').innerHTML = `Congratulazioni, può procedere!`;
+  }
 
-document.getElementById('result').innerHTML = `Congratulazioni, può procedere!`;
+
