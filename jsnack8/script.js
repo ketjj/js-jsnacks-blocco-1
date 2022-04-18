@@ -15,12 +15,7 @@
     
     let insertNumber = prompt('Inserire un numero da 0 a 9');
 
-    while (isNaN(insertNumber)){
-      alert('Non ha inserito un numero da 0 a 9... riprova');
-      insertNumber = prompt('Inserire ' + (i+1) + '° numero');
-    }
-
-    while (insertNumber.length != 1){
+    while (isNaN(insertNumber) || insertNumber.length != 1){
       alert('Non ha inserito un numero da 0 a 9... riprova');
       insertNumber = prompt('Inserire ' + (i+1) + '° numero');
     }
