@@ -3,11 +3,16 @@
  Stampa il cubo dei primi N numeri, dove N è un numero indicato dall’utente.
 */
 
-const n = parseInt(prompt('Inserisci un numero')); 
-const limit = 9;
-
+let n = prompt('Inserisci un numero'); 
+const limit = 1;
 let result;
-for(i = 1; i <= 9; i++){
+
+while (isNaN(n)){
+  alert('Non ha inserito un numero... riprova');
+  n = prompt('Inserire numero');
+}
+
+for(i = 1; i <= limit; i++){
   result = Math.pow(n, 3);
   console.log (result);
 }
