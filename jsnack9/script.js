@@ -3,23 +3,27 @@
  Calcola la somma e la media dei primi 10 numeri.
 */
 
-let totNumbers = 10;
-totNumbers = Math.ceil(Math.random() * 10) +1;
-console.log(totNumbers);
+let numbers = [];
+let c = 0;
+let avrg = 0;
+let totSum=0
 
-let totSm = 0;
-let media = 0;
-
-for(let i = 1; i <= totNumbers; i++){
-  console.log('Numeri: 1 a 10', i);
-  totSm += i
-  console.log('Numeri sommati', totSm);
+while(c<10){
+  //numbers.push;
+  let randomNum = (Math.floor(Math.random() * 10) + 1);
+  numbers.push(randomNum);
+  //dublicate
+  
+  /*while(!numbers.includes(randomNum)){
+    numbers.push(randomNum);
+  }*/
+  totSum += randomNum;
+  c++;
 }
+avrg = totSum / c;
+console.log(numbers);
+console.log(totSum);
 
-media = totSm / totNumbers;
-console.log('Numeri divisi', media);
-
-document.getElementById('result').innerHTML = 
-`
-La somma dei primi 10 numeri random &egrave; ${totSm}, mentre la media &egrave; ${media}.
-`;
+document.querySelector('.insert').textContent += numbers;
+document.getElementById('result1').textContent += totSum;
+document.getElementById('result2').textContent += avrg;

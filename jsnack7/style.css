@@ -2,6 +2,7 @@
   background-color: rgb(249, 114, 90);
   color: white;
   width: 60%;
+  min-height: 50px;
   margin: 20px auto;
   font-size: 30px;
   text-align: center;

@@ -4,20 +4,13 @@
  Il software stampa prima la parola più corta, poi la parola più lunga.
 */
 
-const primaParola = prompt('Inserisci un colore');
-const secondaParola = prompt('Inserisci una città');
+const firstWord = prompt('Inserisci la prima parola');
+const seconsWord = prompt('Inserisci la seconda parola');
 
+const res = document.getElementById('result');
 
-console.log(primaParola);
-console.log(secondaParola);
-
-
-if(primaParola.length > secondaParola.length) {
-  // console.log(secondaParola);
-  document.getElementById('result').innerHTML = secondaParola + " " +primaParola;
-
-  
-} else if (secondaParola.length >= primaParola.length) {
-  // console.log(primaParola);
-  document.getElementById('result').innerHTML = primaParola + " " + secondaParola;
-} 
+if(firstWord.length > seconsWord.length || firstWord.length == seconsWord.length){
+  res.innerHTML = firstWord +' '+ seconsWord;
+} else{
+  res.innerHTML = seconsWord +' '+ firstWord;
+}

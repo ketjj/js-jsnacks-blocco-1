@@ -4,18 +4,19 @@
 // se è dispari inseriscilo nell’array
 // */
 
-let contatore = [];
+const oddNumbers = [];
 
-for(let i = 0; i < 6; i++){
-  const userNumber = parseInt(prompt('Inserire un numero'))
-  if(isNaN(userNumber)){
-    alert('Inserire un numero');
-  }
+for(let i = 1; i <= 6; i++){
+ let insertNumber = parseInt(prompt(`Inserisci ${i}* numero su 6`));
 
-  if(userNumber % 2){
-    contatore.push(userNumber);
-  }
+ while(isNaN(insertNumber)){
+  alert('Inserisci solo i numeri');
+  insertNumber = prompt(`Inserisci ${i}* numero su 6`);
+ }
+
+ if(insertNumber % 2 !== 0){
+  oddNumbers.push(insertNumber);
+ }
 }
 
-document.getElementById('result').innerHTML = contatore;
-console.log(contatore);
+document.getElementById('result').textContent = oddNumbers;

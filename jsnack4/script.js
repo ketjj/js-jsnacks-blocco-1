@@ -4,24 +4,13 @@
 // */
 
 
-const guestList = ['Ketevan','Silvia','Chiara','Simone','Salvatore','Marco','Georgia','Nicolò'];
-console.log(guestList);
+const guestList = ['Ketevan','Silvia','Giada','Simone','Salvatore','Marco','Georgia','Nicolò'];
 
-let guestName;
-let invitation = false;
 
-  guestName = prompt('Inserisci il nome');
+const guestName = prompt('Inserisci il tuo nome');
 
-  for(let i = 0; i < guestList.length; i++){
-    if(guestName === guestList[i]){
-      invitation = true;
-    }
-  }
+const res = document.getElementById('result');
 
-  if(invitation === false){
-    alert('Ci spiace, non è nella lista degli invitati');
-  } else {
-    document.getElementById('result').innerHTML = `Congratulazioni, può procedere!`;
-  }
+guestList.includes(guestName.trim()) ? res.textContent = `${guestName}, ci sei nella lista! 😊` : res.textContent = 'Mi dispiace, non ci sei nella lista 😥';
 
 

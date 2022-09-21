@@ -7,13 +7,12 @@
 */
 
 let listP = [];
-let numberP = 2;
-let startNumber = 2;
 
-while(startNumber < 1000) {
-  listP.push(startNumber);
-  startNumber = startNumber * numberP;
-  console.log(startNumber);
+for(let i = 0; i < 1000; i++){
+  let p = Math.pow(i, 2);
+  listP.push(p);
 }
+console.log(listP)
 
-document.getElementById('result').innerHTML = "La potenza di 2 sono: " + listP;
+
+//document.getElementById('result').textContent = listP;

@@ -9,21 +9,22 @@
 
 
 
-  let sumTotal = 0;
+ const insertedNum = prompt('Inserisci un numero di 4 cifre');
+
+  while(insertedNum.length !== 4){
+    alert('Inserisci un numero con solo 4 cifre');
+    insertedNum = prompt('Inserisci un numero di 4 cifre');
+  }
+  //console.log(insertedNum);
+
+  const slicedNum = Array.from(String(insertedNum), Number);
+  document.querySelector('.insert').textContent += slicedNum;
+  //console.log(slicedNum);
   
-  for(let i = 0; i < 4; i++){
-    
-    let insertNumber = prompt('Inserire un numero da 0 a 9');
-
-    while (isNaN(insertNumber) || insertNumber.length != 1){
-      alert('Non ha inserito un numero da 0 a 9... riprova');
-      insertNumber = prompt('Inserire ' + (i+1) + '° numero');
-    }
-
-    insertNumber = parseInt(insertNumber);
-
-    sumTotal = sumTotal + insertNumber;
-    console.log(insertNumber);
+  let total = 0;
+  for(let i = 0; i < slicedNum.length; i++){
+   total += slicedNum[i];
   }
   
-  document.getElementById('result1').innerHTML = sumTotal;
+  document.getElementById('result').innerHTML += total;
+  //console.log(total);

@@ -4,53 +4,38 @@
 // Esegui questo programma in due versioni, con il for e con il while (facoltativo)
 // */
 
+// 1.VERSION FOR TODO
 
-//For
-const forLoop = document.getElementById('result1');
+//let insertedNumbers =[];
+/*let totNums = 0;
 
-forLoop.addEventListener('click' , function(){
-  let sumTotal = 0;
-  
-  for(let i = 0; i < 5; i++){
-    
-    let insertNumber = prompt('Inserire ' + (i+1) + '° numero');
+for(let i = 1; i<6; i++){
+  let insert= parseInt(prompt(`Inserisci ${i}* numero su 5`));
 
-    while (isNaN(insertNumber)){
-      alert('Non ha inserito un numero... riprova');
-      insertNumber = prompt('Inserire ' + (i+1) + '° numero');
-    }
-
-    insertNumber = parseInt(insertNumber);
-
-    sumTotal = sumTotal + insertNumber;
-    console.log(insertNumber);
+  while(isNaN(insert)){
+    alert('Inserisci solo i numeri');
+    insert = prompt(`Inserisci ${i}* numero su 5`);
   }
-  
-  document.getElementById('result1').innerHTML = sumTotal;
-})
+  totNums += insert;
+  // insertedNumbers.push(insert);
+}
+document.getElementById('result1').textContent += totNums;*/
 
 
-// While
-const forWhile = document.getElementById('result2');
+// 2. VERSION WHILE TODO
 
-forWhile.addEventListener('click' , function(){
+let c = 1;
+let totWhileNums = 0;
 
-  let sumTotal = 0;
-  let contatore = 0;
-  
-  while(contatore < 5){ 
-    
-    let insertNumber = prompt('Inserire ' + (contatore + 1) + ' numero');
-    
-    while(isNaN(insertNumber)){
-      alert('Non ha inserito un numero... riprova');
-      insertNumber = prompt ( 'Inserire ' + (contatore + 1) + ' numero')
-    }
-    insertNumber = parsint(insertNumber);
-    
-    sumTotal = sumTotal + insertNumber;
-    contatore++;
+while(c < 6){
+  let insertNum = parseInt(prompt(`Inserisci ${c}* numero su 5`));
+
+  while(isNaN(insertNum)){
+    alert('Inserisci solo i numeri');
+    insertNum = prompt(`Inserisci ${c}* numero su 5`);
   }
-  
-  document.getElementById('result2').innerHTML = sumTotal;
-})
+  totWhileNums += insertNum;
+  c++;
+}
+// console.log(totWhileNums);
+document.getElementById('result2').textContent += totWhileNums;

@@ -3,18 +3,36 @@
  Stampa il cubo dei primi N numeri, dove N è un numero indicato dall’utente.
 */
 
-let n = prompt('Inserisci un numero'); 
-const limit = 1;
-let result;
+// TODO VER.1
+// let powNumbers = [];
 
-while (isNaN(n)){
-  alert('Non ha inserito un numero... riprova');
-  n = prompt('Inserire numero');
+/*let insertedNumber = parseInt(prompt('Inserisci un numero'));
+
+while(isNaN(insertedNumber)){
+  alert('Inserisci solo un numero');
+  insertedNumber = parseInt(prompt('Inserisci un numero'));
 }
 
-for(i = 1; i <= limit; i++){
-  result = Math.pow(n, 3);
-  console.log (result);
+const poweredNum = Math.pow(insertedNumber, 3);
+
+document.getElementById('result').innerHTML = poweredNum;*/
+
+//TODO 
+
+const numbersList = [];
+
+let insertedNumber = parseInt(prompt('Inserisci un numero'));
+
+while(isNaN(insertedNumber)){
+  alert('Inserisci solo un numero');
+  insertedNumber = parseInt(prompt('Inserisci un numero'));
 }
 
-document.getElementById('result').innerHTML = result;
+for (let i = 1; i <= insertedNumber; i++) {
+  pow = Math.pow(i, 3);
+  numbersList.push(pow); 
+}
+
+document.getElementById('result').textContent = numbersList;
+
+
